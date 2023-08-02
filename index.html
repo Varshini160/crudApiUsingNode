@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Crud</title>
+        <style>
+            body{
+                background-color: #d9f372;
+            }
+            input[type=text], select {
+                width: 60%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            button {
+                width: 80%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        </style>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">CRUD APPLICATION</h1>
+        <h1>Add User</h1>
+        <form action="/addUser" method="post">
+            User ID <input type = "text" id="userid" name="userid" size="20"><br>
+            Name <input type ="text" id="username" name = "username" size="20"><br>
+            DOB <input type ="text" id="dob" name = "dob" size="20"><br>
+            Profession <input type ="text" id="profession" name = "profession" size="20"><br>
+            <button type = "submit" name="submit">
+                Add User
+            </button>
+        </form>
+
+        <h1>Get Specific User Details</h1>
+        <form action="/particularUser" method="post"> 
+            User ID <input type = "text" id="urid" name="urid" size="20"><br>
+            <button type = "submit" name="submit">
+                Get User Info
+            </button>
+        </form>
+
+        <h1>Delete User Details</h1>
+        <form action="/deleteUser" method="post"> 
+            User ID <input type = "text" id="uid" name="uid" size="20"><br>
+            <button type = "submit" name="submit">
+                Delete User
+            </button>
+        </form>
+
+        <h1>Show All User Details</h1>
+        <form action="/showAll" method="get"> 
+            <button type = "submit" name="submit">
+                Show All User Info
+            </button>
+        </form>
+    </bddy>
+</html>
